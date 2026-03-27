@@ -1,0 +1,126 @@
+{
+  "LANGUAGE": "en",
+  "SEO_TITLE": "Mauro Corrales - Portfolio",
+  "SEO_DESCRIPTION": "Mauro Corrales: QA automation and development. Five-plus years testing backend, frontend, mobile, and performance; CI/CD and frameworks. Side full-stack projects.",
+  "HERO_SECTION": {
+    "TITLE": "Hello there!",
+    "TITLE_NAV": "Home",
+    "SUBTITLE_NORMAL": "I'm",
+    "SUBTITLE_EMPHASIS": "Mauro Corrales",
+    "JOB_TITLE": "QA Automation | Developer",
+    "CV": {
+      "BTN_TEXT": "Download CV",
+      "FILENAME": "mauro-corrales-cv.pdf",
+      "PATH": "/pdf/cv.pdf",
+      "ARIA_LABEL": "Download Mauro Corrales CV in English"
+    },
+    "IMAGE": {
+      "ALT": "Mauro Corrales - QA Automation | Developer"
+    }
+  },
+  "ABOUT_SECTION": {
+    "TITLE": "About me",
+    "DESCRIPTION_1": "I'm a developer focused on building solid, scalable digital products. I work proactively, understanding needs to turn ideas into concrete solutions.",
+    "DESCRIPTION_2": "With more than 6 years of experience in IT, I specialize in QA Automation, designing automation solutions and tooling that improve quality and process efficiency.",
+    "DESCRIPTION_3": "",
+    "IMAGE": {
+      "ALT": "Mauro Corrales - About me"
+    }
+  },
+  "SKILLS_SECTION": {
+    "TITLE": "Skills"
+  },
+  "PORTFOLIO_SECTION": {
+    "TITLE": "Projects",
+    "BUTTONS": {
+      "BTN_GITHUB": "Code",
+      "BTN_PRODUCTION": "Demo",
+      "BTN_MORE_PROJECTS": "Show more..."
+    },
+    "PROJECTS": [
+      {
+        "name": "Rinde+",
+        "description": "Multi-currency personal finance platform with monthly dashboards and projections. I implemented scenario-based visualizations, integrations with pricing and inflation APIs, and a JWT-secured backend to support clear, data-driven financial decisions.",
+        "image": "images/portfolio/rinde-mas.webp",
+        "technologies": [
+          {
+            "name": "React",
+            "image": "react.webp"
+          },
+          {
+            "name": "Tailwind",
+            "image": "tailwind.webp"
+          },
+          {
+            "name": "Python",
+            "image": "python.webp"
+          },
+          {
+            "name": "MySQL",
+            "image": "mysql.webp"
+          },
+          {
+            "name": "JWT",
+            "image": "jwt.webp"
+          }
+        ],
+        "urlGithub": "https://github.com/MauroCor/rindemas",
+        "urlProduction": "https://rinde-mas.vercel.app/"
+      },
+      {
+        "name": "AFS",
+        "description": "Application to manage clients, installations, and budgets with per-client traceability. I built an end-to-end operational flow with PDF generation, a serverless API on Vercel, and Supabase persistence to reduce manual work and improve process control.",
+        "image": "images/portfolio/afs-ct.webp",
+        "technologies": [
+          {
+            "name": "React",
+            "image": "react.webp"
+          },
+          {
+            "name": "Tailwind",
+            "image": "tailwind.webp"
+          },
+          {
+            "name": "Supabase",
+            "image": "supabase.webp"
+          }
+        ],
+        "urlGithub": "https://github.com/MauroCor/afs-ct",
+        "urlProduction": "https://afs-ct.vercel.app/"
+      },
+      {
+        "name": "Digital invitation",
+        "description": "Interactive digital invitation with animations, photo carousel, autoplay music, trivia mini-game, and redirects to Calendar, Maps, and Form.",
+        "image": "images/portfolio/wedding-invitation.webp",
+        "technologies": [
+          {
+            "name": "Next.js",
+            "image": "next.webp"
+          },
+          {
+            "name": "Tailwind",
+            "image": "tailwind.webp"
+          },
+          {
+            "name": "Vercel",
+            "image": "vercel.webp"
+          }
+        ],
+        "urlGithub": "https://github.com/maurocor/wedding_invitation",
+        "urlProduction": "https://nabimauro.vercel.app/"
+      }
+    ]
+  },
+  "CONTACT_SECTION": {
+    "TITLE": "Contact me",
+    "DESCRIPTION": "I'm only a message away."
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Developed by",
+    "AUTHOR_NAME": "maurocor"
+  },
+  "THEME": {
+    "DARK_THEME": "Dark theme",
+    "LIGHT_THEME": "Light theme"
+  }
+}

@@ -1,0 +1,23 @@
+---
+interface Props {
+  height?: number;
+  width?: number;
+}
+
+const { height = 40, width = 40 }: Props = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  id="argentina"
+  width={width}
+  height={height}
+  aria-hidden="true"
+>
+  <!-- Mismo marco que english.astro: bandera dentro de y=85.331, alto 341.337 -->
+  <path fill="#74ACDF" d="M0 85.331h512v113.779H0z"></path>
+  <path fill="#FFFFFF" d="M0 199.11h512v113.779H0z"></path>
+  <path fill="#74ACDF" d="M0 312.889h512v113.779H0z"></path>
+  <circle cx="256" cy="256" r="48" fill="#F6B40E"></circle>
+</svg>

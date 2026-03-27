@@ -1,0 +1,126 @@
+{
+  "LANGUAGE": "es",
+  "SEO_TITLE": "Mauro Corrales - Portfolio",
+  "SEO_DESCRIPTION": "Mauro Corrales: QA Automation y desarrollo. Más de cinco años automatizando pruebas (backend, frontend, mobile, performance), CI/CD y frameworks. Proyectos full stack por cuenta propia.",
+  "HERO_SECTION": {
+    "TITLE": "¡Hola!",
+    "TITLE_NAV": "Inicio",
+    "SUBTITLE_NORMAL": "Soy",
+    "SUBTITLE_EMPHASIS": "Mauro Corrales",
+    "JOB_TITLE": "QA Automation | Desarrollador",
+    "CV": {
+      "BTN_TEXT": "Descargar CV",
+      "FILENAME": "mauro-corrales-cv.pdf",
+      "PATH": "/pdf/cv.pdf",
+      "ARIA_LABEL": "Descargar CV de Mauro Corrales en español"
+    },
+    "IMAGE": {
+      "ALT": "Mauro Corrales - QA Automation | Desarrollador"
+    }
+  },
+  "ABOUT_SECTION": {
+    "TITLE": "Sobre mí",
+    "DESCRIPTION_1": "Soy desarrollador enfocado en construir productos digitales sólidos y escalables. Trabajo de forma proactiva, entendiendo las necesidades para transformar ideas en soluciones concretas.",
+    "DESCRIPTION_2": "Con más de 6 años de experiencia en IT, me especializo en QA Automation, diseñando soluciones de automatización y tooling que mejoran la calidad y eficiencia de los procesos.",
+    "DESCRIPTION_3": "",
+    "IMAGE": {
+      "ALT": "Mauro Corrales - Sobre mí"
+    }
+  },
+  "SKILLS_SECTION": {
+    "TITLE": "Habilidades"
+  },
+  "PORTFOLIO_SECTION": {
+    "TITLE": "Proyectos",
+    "BUTTONS": {
+      "BTN_GITHUB": "Código",
+      "BTN_PRODUCTION": "Demo",
+      "BTN_MORE_PROJECTS": "Ver más..."
+    },
+    "PROJECTS": [
+      {
+        "name": "Rinde+",
+        "description": "Plataforma de finanzas personales multi-moneda con dashboards y proyecciones mensuales. Implementé visualizaciones para comparar escenarios, integración con APIs de precios e inflación y backend seguro con JWT para centralizar decisiones financieras con datos claros.",
+        "image": "images/portfolio/rinde-mas.webp",
+        "technologies": [
+          {
+            "name": "React",
+            "image": "react.webp"
+          },
+          {
+            "name": "Tailwind",
+            "image": "tailwind.webp"
+          },
+          {
+            "name": "Python",
+            "image": "python.webp"
+          },
+          {
+            "name": "MySQL",
+            "image": "mysql.webp"
+          },
+          {
+            "name": "JWT",
+            "image": "jwt.webp"
+          }
+        ],
+        "urlGithub": "https://github.com/MauroCor/rindemas",
+        "urlProduction": "https://rinde-mas.vercel.app/"
+      },
+      {
+        "name": "AFS",
+        "description": "Aplicación para gestionar clientes, instalaciones y presupuestos con trazabilidad por cliente. Desarrollé flujo operativo end-to-end con generación de PDFs, API serverless en Vercel y persistencia en Supabase para ordenar la operación y reducir trabajo manual.",
+        "image": "images/portfolio/afs-ct.webp",
+        "technologies": [
+          {
+            "name": "React",
+            "image": "react.webp"
+          },
+          {
+            "name": "Tailwind",
+            "image": "tailwind.webp"
+          },
+          {
+            "name": "Supabase",
+            "image": "supabase.webp"
+          }
+        ],
+        "urlGithub": "https://github.com/MauroCor/afs-ct",
+        "urlProduction": "https://afs-ct.vercel.app/"
+      },
+      {
+        "name": "Invitación digital",
+        "description": "Experiencia digital para eventos con animaciones, carrusel de fotos, música automática y trivia interactiva. Incluye accesos directos a Calendar, Maps y formulario de confirmación para maximizar participación y simplificar la organización.",
+        "image": "images/portfolio/wedding-invitation.webp",
+        "technologies": [
+          {
+            "name": "Next.js",
+            "image": "next.webp"
+          },
+          {
+            "name": "Tailwind",
+            "image": "tailwind.webp"
+          },
+          {
+            "name": "Vercel",
+            "image": "vercel.webp"
+          }
+        ],
+        "urlGithub": "https://github.com/maurocor/wedding_invitation",
+        "urlProduction": "https://nabimauro.vercel.app/"
+      }
+    ]
+  },
+  "CONTACT_SECTION": {
+    "TITLE": "Contáctame",
+    "DESCRIPTION": "Estoy a un mensaje de distancia."
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Desarrollado por",
+    "AUTHOR_NAME": "maurocor"
+  },
+  "THEME": {
+    "DARK_THEME": "Tema oscuro",
+    "LIGHT_THEME": "Tema claro"
+  }
+}

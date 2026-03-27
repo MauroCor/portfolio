@@ -1,0 +1,27 @@
+{
+  "cardsData": [
+    { "name": "Postman", "imagePath": "/images/postman.webp", "alt": "postman" },
+    { "name": "Cypress", "imagePath": "/images/cypress.webp", "alt": "cypress" },
+    { "name": "K6", "imagePath": "/images/k6.webp", "alt": "k6" },
+    { "name": "Playwright", "imagePath": "/images/playwright.webp", "alt": "playwright" },
+    { "name": "JavaScript", "imagePath": "/images/js.webp", "alt": "javascript" },
+    { "name": "Python", "imagePath": "/images/python.webp", "alt": "python" },
+    { "name": "React", "imagePath": "/images/react.webp", "alt": "react" },
+    { "name": "TypeScript", "imagePath": "/images/ts.webp", "alt": "typescript" },
+    { "name": "Tailwind", "imagePath": "/images/tailwind.webp", "alt": "tailwind" },
+    { "name": "Django", "imagePath": "/images/django.webp", "alt": "django" },
+    { "name": "CSS", "imagePath": "/images/css.webp", "alt": "css" },
+    { "name": "Next.js", "imagePath": "/images/next.webp", "alt": "nextjs" },
+    { "name": "MySQL", "imagePath": "/images/mysql.webp", "alt": "mysql" },
+    { "name": "MongoDB", "imagePath": "/images/mongo.webp", "alt": "mongodb" },
+    { "name": "Supabase", "imagePath": "/images/supabase.webp", "alt": "supabase" },
+    { "name": "JWT", "imagePath": "/images/jwt.webp", "alt": "jwt" },
+    { "name": "Astro", "imagePath": "/images/astro.webp", "alt": "astro" },
+    { "name": "Bootstrap", "imagePath": "/images/bootstrap.webp", "alt": "bootstrap" },
+    { "name": "Git", "imagePath": "/images/git.webp", "alt": "git" },
+    { "name": "Docker", "imagePath": "/images/docker.webp", "alt": "docker" },
+    { "name": "Vercel", "imagePath": "/images/vercel.webp", "alt": "vercel" },
+    { "name": "Azure", "imagePath": "/images/azure.webp", "alt": "azure" },
+    { "name": "Kubernetes", "imagePath": "/images/kubernetes.webp", "alt": "kubernetes" }
+  ]
+}
