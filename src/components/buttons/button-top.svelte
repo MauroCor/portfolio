@@ -30,9 +30,9 @@
 </script>
 
 {#if showGoUpButton}
-  <span class="btn-top" on:click={scrollTop}>
+  <button type="button" class="btn-top" on:click={scrollTop} aria-label="Volver arriba">
     <ArrowupIcon />
-  </span>
+  </button>
 {/if}
 
 <style>
@@ -54,6 +54,7 @@
     color: var(--bg-dark3);
     box-shadow: 0px 0 20px 3px rgb(0 0 0 / 5%);
     border: 1px solid var(--border-color-nav);
+    border-width: 1px;
   }
 
   .btn-top:hover {

@@ -4,10 +4,12 @@ import EnvelopeIcon from '@components/icons/envelope-icon.astro';
 import GithubIcon from '@components/icons/github-icon.astro';
 import LinkedinIcon from '@components/icons/linkedin-icon.astro';
 import SendIcon from '@components/icons/send-icon.astro';
+import WhatsappIcon from '@components/icons/whatsapp-icon.astro';
 import {
   EMAIL_URL,
   GITHUB_URL,
   LINKEDIN_URL,
+  WHATSAPP_URL,
 } from '@constants/urls';
 import { getI18n } from '@i18n/index';
 
@@ -46,6 +48,9 @@ const i18n = getI18n({ currentLocale });
       </a>
       <a target="_blank" href={LINKEDIN_URL} class="icon" aria-label="Linkedin">
         <LinkedinIcon />
+      </a>
+      <a target="_blank" href={WHATSAPP_URL} class="icon" aria-label="WhatsApp">
+        <WhatsappIcon />
       </a>
     </div>
     <div class="detail">
@@ -188,7 +193,8 @@ const i18n = getI18n({ currentLocale });
   @media (max-width: 480px) {
     .container {
       max-width: 100%;
-      margin: 5rem auto;
+      margin: 3rem auto;
+      gap: 1.2rem;
     }
 
     .container .description {
@@ -205,6 +211,37 @@ const i18n = getI18n({ currentLocale });
 
     .email-wrapper .email {
       font-size: 16px;
+      height: auto;
+      min-height: 44px;
+      padding: 10px 14px;
+      flex: 1;
+    }
+
+    .email-wrapper {
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+
+    .email-wrapper .email span {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      word-break: break-all;
+      line-height: 1.25;
+    }
+
+    .email-wrapper .buttons {
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .email-wrapper .buttons .icon {
+      padding: 9px 11px;
+    }
+
+    .email-wrapper .buttons .icon :global(svg) {
+      width: 20px;
+      height: 20px;
     }
   }
 </style>

@@ -104,7 +104,7 @@
       <div class="line-divisor"></div>
     </li>
     <li>
-      <a on:click={setTheme} aria-label="Change theme">
+      <button type="button" on:click={setTheme} aria-label="Change theme">
         {#if isDarkTheme}
         <SunIcon />
         <span class="title">{theme.light}</span>
@@ -112,7 +112,7 @@
         <MoonIcon />
         <span class="title">{theme.dark}</span>
         {/if}
-      </a>
+      </button>
     </li>
   </ul>
 </nav>
@@ -170,7 +170,8 @@
     background: var(--primary-color);
   }
 
-  nav ul.nav li a {
+  nav ul.nav li a,
+  nav ul.nav li button {
     position: relative;
     display: flex;
     justify-content: center;
@@ -180,13 +181,18 @@
     text-decoration: none;
     color: var(--bg-dark3);
     font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
   }
 
-  nav ul.nav li.active a {
+  nav ul.nav li.active a,
+  nav ul.nav li.active button {
     color: #fff;
   }
 
-  nav ul.nav li a .title {
+  nav ul.nav li a .title,
+  nav ul.nav li button .title {
     position: absolute;
     left: 50%;
     top: -70px;
@@ -211,13 +217,15 @@
     background-color: var(--primary-color);
   }
 
-  nav ul.nav li a:hover .title {
+  nav ul.nav li a:hover .title,
+  nav ul.nav li button:hover .title {
     transform: translate(-50%, 50%);
     visibility: visible;
     opacity: 1;
   }
 
-  nav ul.nav li a .title::before {
+  nav ul.nav li a .title::before,
+  nav ul.nav li button .title::before {
     content: "";
     position: absolute;
     width: 12px;

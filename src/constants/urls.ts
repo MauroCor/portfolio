@@ -8,6 +8,8 @@ const GITHUB_URL = 'https://github.com/maurocor';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/maurocorrales/';
 
+const WHATSAPP_URL = 'https://wa.me/5493515515392';
+
 /** Reemplazá por tu correo real. */
 const EMAIL_URL = 'maurocorrales4@gmail.com';
 
@@ -17,4 +19,5 @@ export {
   LINKEDIN_URL,
   OG_IMAGE_URL,
   SITE_URL,
+  WHATSAPP_URL,
 };

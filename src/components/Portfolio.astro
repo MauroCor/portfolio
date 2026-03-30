@@ -2,6 +2,7 @@
 import CodeIcon from '@components/icons/code-icon.astro';
 import ExternalIcon from '@components/icons/external-icon.astro';
 import GithubIcon from '@components/icons/github-icon.astro';
+import { Image } from 'astro:assets';
 import { GITHUB_URL } from '@constants/urls';
 import { getI18n } from '@i18n/index';
 
@@ -22,9 +23,15 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     {
       projects.map((project) => (
         <div class="project">
-          <a href={project.urlProduction} target="_blank" aria-label="project-preview">
+          <a href={project.urlProduction} target="_blank" rel="noopener noreferrer" aria-label="project-preview">
             <picture class="project-preview">
-              <img src={withBase(project.image)} alt="project-preview" loading="lazy">
+              <Image
+                src={withBase(project.image)}
+                alt="project-preview"
+                loading="lazy"
+                width={1240}
+                height={698}
+              />
             </picture>
           </a>
           <div class="description">
@@ -34,10 +41,13 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
               {
                 project.technologies.map((technology) => (
                   <picture class="technology">
-                    <img
+                    <Image
                       src={withBase(`/images/${technology.image}`)}
                       alt={`${technology.name} tool used in the project`}
-                      loading="lazy">
+                      loading="lazy"
+                      width={64}
+                      height={64}
+                    />
                   </picture>
                 ))
               }
@@ -47,6 +57,7 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
                 class="btn icon"
                 target="_blank"
                 href={project.urlGithub}
+                rel="noopener noreferrer"
                 aria-label="github-repository"
                 >
                 {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_GITHUB} <GithubIcon width={26} height={26}/>
@@ -55,6 +66,7 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
                   class="btn icon"
                   target="_blank"
                   href={project.urlProduction}
+                  rel="noopener noreferrer"
                   aria-label="project-demo"
                 >
                 {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_PRODUCTION}
@@ -71,6 +83,7 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     <a
       href={`${GITHUB_URL}?tab=repositories`}
       target="_blank"
+      rel="noopener noreferrer"
       class="btn"
       aria-label="more-projects"
       >
@@ -100,6 +113,15 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .project + .project {
+    border-top: 1px solid color-mix(in srgb, var(--font-color-2) 22%, transparent);
+  }
+
+  .project > a {
+    order: 2;
   }
 
   .description .technologies img {
@@ -145,6 +167,7 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     justify-content: center;
     line-height: 1.8rem;
     gap: 1.2rem;
+    order: 1;
   }
 
   .description .title {
@@ -199,6 +222,12 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
       align-items: center;
       justify-content: center;
       gap: 1.8rem;
+      padding-top: 1.5rem;
+    }
+
+    .project > a,
+    .description {
+      order: initial;
     }
 
     .description .technologies img {

@@ -1,7 +1,9 @@
 ---
 import GithubIcon from '@components/icons/github-icon.astro';
 import LinkedinIcon from '@components/icons/linkedin-icon.astro';
-import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
+import WhatsappIcon from '@components/icons/whatsapp-icon.astro';
+import { Image } from 'astro:assets';
+import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL } from '@constants/urls.ts';
 import { getI18n } from '@i18n/index';
 
 const { currentLocale } = Astro;
@@ -11,7 +13,15 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
 ---
 
 <section class="home" id="home">
-  <img src={withBase('/me.webp')} alt={i18n.HERO_SECTION.IMAGE.ALT} class="profile" />
+  <Image
+    src={withBase('/me.webp')}
+    alt={i18n.HERO_SECTION.IMAGE.ALT}
+    class="profile"
+    width={480}
+    height={448}
+    loading="eager"
+    fetchpriority="high"
+  />
 
   <div class="main-title">
     <h1 class="title">{i18n.HERO_SECTION.TITLE}<span>✌️</span></h1>
@@ -45,18 +55,45 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
         >
           <LinkedinIcon height={40} width={40} />
         </a>
+        <a
+          target="_blank"
+          href={WHATSAPP_URL}
+          class="icon"
+          aria-label="WhatsApp"
+        >
+          <WhatsappIcon height={40} width={40} />
+        </a>
       </div>
     </div>
   </div>
+  <span class="scroll-down" aria-hidden="true"></span>
 </section>
 
 <style>
   section.home {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 100vh !important;
     margin: 0;
+  }
+
+  .scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 10rem;
+    width: 0.95rem;
+    height: 0.95rem;
+    border-right: 3px solid var(--font-color-2);
+    border-bottom: 3px solid var(--font-color-2);
+    border-radius: 2px;
+    transform: translateX(-50%) rotate(45deg);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.55));
+    opacity: 0;
+    animation:
+      fadeInUp 0.8s ease-out 0.35s forwards,
+      chevron-bounce 1.6s ease-in-out 1.15s infinite;
   }
 
   .main-title {
@@ -133,6 +170,27 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     }
   }
 
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px) rotate(45deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) rotate(45deg);
+    }
+  }
+
+  @keyframes chevron-bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0) rotate(45deg);
+    }
+    50% {
+      transform: translateX(-50%) translateY(8px) rotate(45deg);
+    }
+  }
+
   h2.title span.subtitle-name {
     font-size: 64;
     font-weight: bold;
@@ -195,6 +253,10 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     .main-title .bottom {
       justify-content: center;
     }
+
+    .scroll-down {
+      bottom: 8rem;
+    }
   }
 
   @media (max-width: 480px) {
@@ -209,6 +271,20 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
     img.profile {
       width: 14rem;
       height: 14rem;
+    }
+
+    .scroll-down {
+      width: 0.85rem;
+      height: 0.85rem;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-down {
+      opacity: 1;
+      animation: none;
     }
   }
 </style>

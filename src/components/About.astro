@@ -1,5 +1,6 @@
 ---
 import UserIcon from '@components/icons/user-icon.astro';
+import { Image } from 'astro:assets';
 import { getI18n } from '@i18n/index';
 
 const { currentLocale } = Astro;
@@ -24,7 +25,13 @@ const withBase = (path: string) => `${import.meta.env.BASE_URL.replace(/\/?$/, '
       }
     </div>
     <div class="image">
-      <img src={withBase('/programming.webp')} alt={i18n.ABOUT_SECTION.IMAGE.ALT}>
+      <Image
+        src={withBase('/programming.webp')}
+        alt={i18n.ABOUT_SECTION.IMAGE.ALT}
+        width={352}
+        height={320}
+        loading="lazy"
+      />
     </div>
   </div>
 </section>

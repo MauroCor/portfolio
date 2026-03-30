@@ -40,7 +40,7 @@
     "PROJECTS": [
       {
         "name": "Rinde+",
-        "description": "Plataforma de finanzas personales multi-moneda con dashboards y proyecciones mensuales. Implementé visualizaciones para comparar escenarios, integración con APIs de precios e inflación y backend seguro con JWT para centralizar decisiones financieras con datos claros.",
+        "description": "Plataforma de finanzas personales multi-moneda con dashboards y proyecciones mensuales. Implementé visualizaciones para comparar escenarios, integración con APIs de dólar e inflación y backend seguro con JWT para centralizar decisiones financieras con datos claros.",
         "image": "images/portfolio/rinde-mas.webp",
         "technologies": [
           {
@@ -113,7 +113,7 @@
   },
   "CONTACT_SECTION": {
     "TITLE": "Contáctame",
-    "DESCRIPTION": "Estoy a un mensaje de distancia."
+    "DESCRIPTION": "Estamos a un mensaje de distancia."
   },
   "FOOTER": {
     "DESCRIPTION": "Desarrollado por",
