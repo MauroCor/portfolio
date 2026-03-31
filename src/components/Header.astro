@@ -1,8 +1,5 @@
 ---
-import GithubIcon from '@components/icons/github-icon.astro';
-import LinkedinIcon from '@components/icons/linkedin-icon.astro';
 import LanguageSelect from '@components/selects/language.astro';
-import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
 ---
 
 <header>
@@ -10,12 +7,6 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     Mcor<span>.</span>
   </p>
   <div class="social-icons">
-    <a target="_blank" href={GITHUB_URL} class="icon" aria-label="Github">
-      <GithubIcon height={35} width={35} />
-    </a>
-    <a target="_blank" href={LINKEDIN_URL} class="icon" aria-label="Linkedin">
-      <LinkedinIcon height={35} width={35} />
-    </a>
     <LanguageSelect />
   </div>
 </header>

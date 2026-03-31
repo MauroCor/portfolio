@@ -48,13 +48,21 @@
   function handleScroll() {
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('li');
+    const currentScroll = window.scrollY;
+    const scrollBottom = currentScroll + window.innerHeight;
+    const pageBottom = document.documentElement.scrollHeight - 2;
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (scrollY >= sectionTop - 60) {
+      if (currentScroll >= sectionTop - 60) {
         current = section.id;
       }
     });
+
+    // Force the last section as active when user reaches the page bottom.
+    if (scrollBottom >= pageBottom) {
+      current = 'contact';
+    }
 
     navLi.forEach((li) => {
       li.classList.remove('active');
@@ -63,7 +71,7 @@
       }
     });
 
-    scrollY = window.scrollY; // Actualiza la posición de desplazamiento
+    scrollY = currentScroll; // Actualiza la posición de desplazamiento
   }
 </script>
 
@@ -239,6 +247,10 @@
   }
 
   @media (max-width: 768px) {
+    nav {
+      transform: translate(-50%, -15%);
+    }
+
     nav ul.nav li {
       width: 56px;
       height: 56px;
@@ -246,9 +258,17 @@
     nav ul.nav li a .title {
       display: none;
     }
+
+    nav ul.nav li:last-child button :global(svg) {
+      transform: translateX(-8px);
+    }
   }
 
   @media (max-width: 480px) {
+    nav {
+      transform: translate(-50%, -8%);
+    }
+
     nav ul.nav li {
       width: 46px;
       height: 46px;

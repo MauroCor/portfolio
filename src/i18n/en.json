@@ -1,13 +1,11 @@
 {
   "LANGUAGE": "en",
   "SEO_TITLE": "Mauro Corrales - Portfolio",
-  "SEO_DESCRIPTION": "Mauro Corrales: QA automation and development. Five-plus years testing backend, frontend, mobile, and performance; CI/CD and frameworks. Side full-stack projects.",
+  "SEO_DESCRIPTION": "Mauro Corrales: Sr QA Automation and development. Five-plus years testing backend, frontend, mobile, and performance; CI/CD and frameworks. Side full-stack projects.",
   "HERO_SECTION": {
-    "TITLE": "Hello there!",
     "TITLE_NAV": "Home",
-    "SUBTITLE_NORMAL": "I'm",
     "SUBTITLE_EMPHASIS": "Mauro Corrales",
-    "JOB_TITLE": "QA Automation | Developer",
+    "JOB_TITLE": " Developer",
     "CV": {
       "BTN_TEXT": "Download CV",
       "FILENAME": "mauro-corrales-cv.pdf",
@@ -15,13 +13,13 @@
       "ARIA_LABEL": "Download Mauro Corrales CV in English"
     },
     "IMAGE": {
-      "ALT": "Mauro Corrales - QA Automation | Developer"
+      "ALT": "Mauro Corrales -  Developer"
     }
   },
   "ABOUT_SECTION": {
     "TITLE": "About me",
     "DESCRIPTION_1": "I'm a developer focused on building solid, scalable digital products. I work proactively, understanding needs to turn ideas into concrete solutions.",
-    "DESCRIPTION_2": "With more than 6 years of experience in IT, I specialize in QA Automation, designing automation solutions and tooling that improve quality and process efficiency.",
+    "DESCRIPTION_2": "With more than 6 years of experience in IT, I specialize in Sr QA Automation, designing automation solutions and tooling that improve quality and process efficiency.",
     "DESCRIPTION_3": "",
     "IMAGE": {
       "ALT": "Mauro Corrales - About me"
@@ -113,7 +111,7 @@
   },
   "CONTACT_SECTION": {
     "TITLE": "Contact me",
-    "DESCRIPTION": "I'm only a message away."
+    "DESCRIPTION": "We're only a message away."
   },
   "FOOTER": {
     "DESCRIPTION": "Developed by",

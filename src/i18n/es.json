@@ -1,13 +1,11 @@
 {
   "LANGUAGE": "es",
   "SEO_TITLE": "Mauro Corrales - Portfolio",
-  "SEO_DESCRIPTION": "Mauro Corrales: QA Automation y desarrollo. Más de cinco años automatizando pruebas (backend, frontend, mobile, performance), CI/CD y frameworks. Proyectos full stack por cuenta propia.",
+  "SEO_DESCRIPTION": "Mauro Corrales: Sr QA Automation y desarrollo. Más de cinco años automatizando pruebas (backend, frontend, mobile, performance), CI/CD y frameworks. Proyectos full stack por cuenta propia.",
   "HERO_SECTION": {
-    "TITLE": "¡Hola!",
     "TITLE_NAV": "Inicio",
-    "SUBTITLE_NORMAL": "Soy",
     "SUBTITLE_EMPHASIS": "Mauro Corrales",
-    "JOB_TITLE": "QA Automation | Desarrollador",
+    "JOB_TITLE": " Desarrollador",
     "CV": {
       "BTN_TEXT": "Descargar CV",
       "FILENAME": "mauro-corrales-cv.pdf",
@@ -15,13 +13,13 @@
       "ARIA_LABEL": "Descargar CV de Mauro Corrales en español"
     },
     "IMAGE": {
-      "ALT": "Mauro Corrales - QA Automation | Desarrollador"
+      "ALT": "Mauro Corrales -  Desarrollador"
     }
   },
   "ABOUT_SECTION": {
     "TITLE": "Sobre mí",
     "DESCRIPTION_1": "Soy desarrollador enfocado en construir productos digitales sólidos y escalables. Trabajo de forma proactiva, entendiendo las necesidades para transformar ideas en soluciones concretas.",
-    "DESCRIPTION_2": "Con más de 6 años de experiencia en IT, me especializo en QA Automation, diseñando soluciones de automatización y tooling que mejoran la calidad y eficiencia de los procesos.",
+    "DESCRIPTION_2": "Con más de 6 años de experiencia en IT, me especializo en Sr QA Automation, diseñando soluciones de automatización y tooling que mejoran la calidad y eficiencia de los procesos.",
     "DESCRIPTION_3": "",
     "IMAGE": {
       "ALT": "Mauro Corrales - Sobre mí"

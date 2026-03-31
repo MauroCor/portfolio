@@ -210,38 +210,38 @@ const i18n = getI18n({ currentLocale });
     }
 
     .email-wrapper .email {
-      font-size: 16px;
+      font-size: 14px;
       height: auto;
       min-height: 44px;
-      padding: 10px 14px;
+      padding: 10px 12px;
       flex: 1;
     }
 
     .email-wrapper {
-      gap: 0.6rem;
-      align-items: flex-start;
+      gap: 0.4rem;
+      align-items: center;
     }
 
     .email-wrapper .email span {
-      white-space: normal;
-      overflow: visible;
-      text-overflow: clip;
-      word-break: break-all;
-      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: normal;
+      line-height: 1.2;
     }
 
     .email-wrapper .buttons {
-      gap: 0.5rem;
+      gap: 0.35rem;
       flex-shrink: 0;
     }
 
     .email-wrapper .buttons .icon {
-      padding: 9px 11px;
+      padding: 7px 8px;
     }
 
     .email-wrapper .buttons .icon :global(svg) {
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
     }
   }
 </style>

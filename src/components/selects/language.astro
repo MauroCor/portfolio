@@ -15,8 +15,12 @@ const LANGUAGES_SUPPORTED = [
   },
 ];
 
-const path = Astro.url.pathname;
-const currentLocale = LANGUAGES_SUPPORTED.find(({ id }) => path.startsWith(`/${id}`))
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const pathWithoutBase = Astro.url.pathname.startsWith(basePath)
+  ? Astro.url.pathname.slice(basePath.length) || '/'
+  : Astro.url.pathname;
+
+const currentLocale = LANGUAGES_SUPPORTED.find(({ id }) => pathWithoutBase.startsWith(`/${id}`))
   || LANGUAGES_SUPPORTED[0];
 const LANGUAGES_FILTERED = LANGUAGES_SUPPORTED.filter(
   ({ id }) => id !== currentLocale.id,
@@ -101,18 +105,35 @@ const LANGUAGES_FILTERED = LANGUAGES_SUPPORTED.filter(
 </style>
 
 <script>
+  const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+  function stripBasePath(path: string) {
+    if (!BASE_PATH || BASE_PATH === '/') return path;
+    if (path.startsWith(BASE_PATH)) {
+      const stripped = path.slice(BASE_PATH.length);
+      return stripped || '/';
+    }
+    return path;
+  }
+
+  function withBasePath(path: string) {
+    if (!BASE_PATH || BASE_PATH === '/') return path;
+    return `${BASE_PATH}${path === '/' ? '' : path}`;
+  }
+
   function changeLanguage(langId: string) {
     const currentPath = window.location.pathname;
-    const hasLangPrefix = /^\/[a-z]{2}(\/|$)/.test(currentPath);
+    const pathWithoutBase = stripBasePath(currentPath);
+    const hasLangPrefix = /^\/[a-z]{2}(\/|$)/.test(pathWithoutBase);
 
-    let newPath;
+    let newPathWithoutBase;
     if (hasLangPrefix) {
-      newPath = currentPath.replace(/^\/[a-z]{2}/, `/${langId}`);
+      newPathWithoutBase = pathWithoutBase.replace(/^\/[a-z]{2}/, `/${langId}`);
     } else {
-      newPath = `/${langId}${currentPath}`;
+      newPathWithoutBase = `/${langId}${pathWithoutBase}`;
     }
 
-    window.location.pathname = newPath;
+    window.location.pathname = withBasePath(newPathWithoutBase);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
